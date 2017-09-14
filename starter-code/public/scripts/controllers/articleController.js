@@ -4,7 +4,9 @@ var app = app || {};
 (function(module) {
   const articleController = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE /COMMENT: What is this function doing? grabbing articles from context and giving them to articleView.index
+  // Where is it called?routes.js
+  // Does it call any other functions, and if so, in what file(s) do those function(s) live? articleView.index and lives in articleView.js
   // (put your response in a comment here)
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
@@ -15,7 +17,8 @@ var app = app || {};
       next();
     };
 
-    // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+    // COMMENT: What is this function doing? 
+    // Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
     // (put your response in a comment here)
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };

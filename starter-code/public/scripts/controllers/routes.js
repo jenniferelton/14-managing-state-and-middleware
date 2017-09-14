@@ -13,5 +13,4 @@ page('/author/:authorName', app.articleController.loadByAuthor, app.articleContr
 page('/category/:categoryName', app.articleController.loadByCategory, app.articleController.index);
 
 // COMMENT: What is this function doing?
-// STRETCH COMMENT: There is another way to write this same method. Find it in the documentation and comment what it is here.
 page();

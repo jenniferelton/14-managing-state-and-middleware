@@ -7,7 +7,6 @@ var app = app || {};
   // DONE /COMMENT: What is this function doing? grabbing articles from context and giving them to articleView.index
   // Where is it called?routes.js
   // Does it call any other functions, and if so, in what file(s) do those function(s) live? articleView.index and lives in articleView.js
-  // (put your response in a comment here)
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
@@ -17,9 +16,10 @@ var app = app || {};
       next();
     };
 
-    // COMMENT: What is this function doing? 
+    // DONE COMMENT: What is this function doing? 
+    //It finds articles by the Id.
     // Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-    // (put your response in a comment here)
+    // It's called elsewhere in articleController.js- in loadByAuthor/Category
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };
 
